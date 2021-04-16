@@ -144,7 +144,9 @@
                     <img id="preview-image" src="unknown-user.jpg">
                 </div>
                 <div class="image-input-container">
-                    <input type="file" accept="image/*" onchange="updatePreviewImage(event)" name="image" id="image-input">
+                    <label class="custom-file-upload">
+                        <input type="file" accept="image/*" onchange="updatePreviewImage(event)" name="image" id="image-input">
+                    </label>
                 </div>
                 <div class="continue-div">
                     <button type="button" class="continue" id="fourth-continue">Continuar</button>

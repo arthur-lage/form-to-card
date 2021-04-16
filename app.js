@@ -85,7 +85,11 @@ restartButton.addEventListener("click", (e) => {
 })
 
 const loadCard = () => {
-    resultsImage.src = information.imageSource;
+    if(information.imageSource == undefined){
+        resultsImage.src = './unknown-user.jpg';
+    } else {
+        resultsImage.src = information.imageSource;
+    }
     resultsName.innerHTML = information.name;
     resultsFavoriteActivity.innerHTML = information.favoriteActivity;
     resultsGenero.innerHTML = information.genero;
