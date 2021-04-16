@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111;   
+}
+
+h1{
+    color: white;
+    font-family: "Poppins";
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+form{
+    font-family: "Poppins";
+    transition: .5s ease-out;
+    position: absolute;
+    color: white;
+    padding: 1.1rem;
+    flex-wrap: wrap;
+    letter-spacing: .1rem;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0px 4px 24px rgba(0,0,0,0.5);
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form div{
+    margin: .5rem .5rem;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"] + label {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #e90e32;
+    border-radius: 10px;
+    font: bold 12px "Poppins", sans-serif;
+    color: #e90e32;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 200ms, transform 200ms, color 200ms;
+    cursor: pointer;
+}
+
+input[type="radio"] + label:hover{
+    background-color: #e90e32;
+    color: #fff;
+}
+
+input[type="radio"]:checked + label{
+    background-color: #e90e32;
+    transform: scale(1.075);
+    color: #fff;
+}
+
+input[type="radio"] + label i{
+    font-size: 36px;
+
+}
+
+.continue-div{
+    display: block;
+    text-align: center;
+}
+
+.continue{
+    display: block;
+    background: transparent;
+    transition: .3s ease;
+    cursor: pointer;
+    color: #1163ce;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0;
+    letter-spacing: .1rem;
+    border-radius: 20px;
+    padding: .5rem 3rem;
+    outline: 0;
+    border: 4px solid #1163ce;
+}
+
+.continue:hover{
+    background: #1163ce;
+    color: white;
+}
+
+.passa-tempo{
+    pointer-events: none;
+    opacity: 0;
+}
+
+.nome form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nome form .input-field{
+    width: 100%;
+    max-width: 450px;
+}
+
+.nome form .input-field #nome{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    font-family: "Poppins";
+    font-size: 1rem;
+    transition: .25s ease;
+}
+
+.nome form .input-field #nome:focus{
+    border: 3px solid #1163ce;
+}
+
+form #title{
+    position: relative;
+}
+
+form #title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    height: 2px;
+    background-color: #1163ce;
+    width: 100px;
+}
+
+.genero{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.genero form {
+    display: flex;
+    flex-direction: column;
+}
+
+.genero form .opcoes{
+    display: flex;
+}
+
+.results-card{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.results-card form{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins";
+}
+
+.results-card form h1{
+    position: relative;
+}
+
+.results-card form h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    height: 2px;
+    background-image: linear-gradient(to right, #1163ce, #e90e32);
+    width: 195px;
+}
+
+.results-card form p {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.results-card form span{
+    font-size: 1.5rem;
+}
+
+#reiniciar{
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: "Poppins";
+    padding: 10px;
+    background: #1163ce;
+    border-radius: 5px;
+    border: 0;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+#reiniciar i{
+    margin: 0 .5rem;
+}
+
+#reiniciar:hover{
+    background: #09418b;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

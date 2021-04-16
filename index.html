@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário</h1>
+        <div class="nome">
+            <form>
+                <div id="title">
+                    <h1>Nome</h1>
+                </div>
+                <div class="input-field">
+                    <input type="text" required name="nome" id="nome" placeholder="Digite seu Nome">
+                </div>
+                <div class="continue-div">
+                    <button type="button" class="continue" id="first-continue">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div class="passa-tempo">
+            <form>
+                <div class="title">
+                    <h1>Passa-tempo Favorito</h1>
+                </div>
+                <div>
+                    <input type="radio" checked name="choose" id="walk" value="Caminhar">
+                    <label for="walk">
+                        <i class="fas fa-walking"></i>
+                        <span>CAMINHAR</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="code" value="Programar">
+                    <label for="code">
+                        <i class="fas fa-code"></i>
+                        <span>PROGRAMAR</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="eat" value="Comer">
+                    <label for="eat">
+                        <i class="fas fa-utensils"></i>
+                        <span>COMER</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="sleep" value="Dormir">
+                    <label for="sleep">
+                        <i class="fas fa-bed"></i>
+                        <span>DORMIR</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="play" value="Jogar">
+                    <label for="play">
+                        <i class="fas fa-gamepad"></i>
+                        <span>JOGAR</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="cook" value="Cozinhar">
+                    <label for="cook">
+                        <i class="fas fa-hamburger"></i>
+                        <span>COZINHAR</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="draw" value="Desenhar">
+                    <label for="draw">
+                        <i class="fas fa-pencil-alt"></i>
+                        <span>DESENHAR</span>
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" name="choose" id="write" value="Escrever">
+                    <label for="write">
+                        <i class="fas fa-feather-alt"></i>
+                        <span>ESCREVER</span>
+                    </label>
+                </div>
+                <div class="continue-div">
+                    <button type="button" class="continue" id="second-continue">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div class="genero">
+            <form>
+                <div class="title">
+                    <h1>Gênero</h1>
+                </div>
+                <div class="opcoes">
+
+                    <div>
+                        <input type="radio" name="genero" id="masc" value="Masculino">
+                        <label for="masc">
+                            <i class="fas fa-male"></i>
+                            <span>Masculino</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" id="fem" value="Feminino">
+                        <label for="fem">
+                            <i class="fas fa-female"></i>
+                            <span>Feminino</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" id="other" value="Outro">
+                        <label for="other">
+                            <i class="fas fa-genderless"></i>
+                            <span>Outro</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="continue-div">
+                    <button type="button" class="continue" id="third-continue">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div class="results-card">
+            <form>
+                <div class="title">
+                    <h1>Resultados</h1>
+                </div>
+                <div class="resultados">
+                    <p>Nome: <span id="results-name"></span></p>
+                    <p>Passa-tempo favorito: <span id="results-favorite-activity"></span></p>
+                    <p>Gênero: <span id="results-genero"></span></p>
+                </div>
+                <div class="restart-div">
+                    <button type="button" class="restart" id="reiniciar">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Reiniciar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
