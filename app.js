@@ -12,8 +12,15 @@ const restartButton = document.querySelector("#reiniciar");
 const resultsName = document.querySelector("#results-name");
 const resultsFavoriteActivity = document.querySelector("#results-favorite-activity");
 const resultsGenero = document.querySelector("#results-genero");
+const fourthButton = document.querySelector("#fourth-continue");
+const imageForm = document.querySelector(".image");
+const chosenImage = document.querySelector("#image-input");
+const previewImage = document.querySelector("#preview-image")
+const pageTitle = document.querySelector("#main-title");
+const resultsImage = document.querySelector("#results-image");
 
 let currentState = 0;
+let newImage;
 let information = {};
 
 firstButton.addEventListener("click", (e) => {
@@ -50,6 +57,20 @@ thirdButton.addEventListener("click", (e) => {
         information.genero = selected;
         generoForm.style.opacity = "0";
         generoForm.style.pointerEvents = "none";
+        imageForm.style.animation = "fade-in .5s linear"
+        imageForm.style.opacity = "1";
+        imageForm.style.pointerEvents = "auto";
+        currentState++;
+    }
+})
+
+fourthButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(currentState == 3){
+        information.imageSource = newImage;
+        imageForm.style.opacity = "0";
+        imageForm.style.pointerEvents = "none";
+        pageTitle.style.opacity = "0";
         resultsCard.style.animation = "fade-in .5s linear";
         resultsCard.style.opacity = "1";
         resultsCard.style.pointerEvents = "auto";
@@ -64,7 +85,13 @@ restartButton.addEventListener("click", (e) => {
 })
 
 const loadCard = () => {
+    resultsImage.src = information.imageSource;
     resultsName.innerHTML = information.name;
     resultsFavoriteActivity.innerHTML = information.favoriteActivity;
     resultsGenero.innerHTML = information.genero;
+}
+
+function updatePreviewImage(event) {
+    newImage = URL.createObjectURL(event.target.files[0]);
+    previewImage.src = newImage;
 }

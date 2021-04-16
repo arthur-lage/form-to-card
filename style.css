@@ -168,6 +168,7 @@ form #title::after{
 .results-card form{
     display: flex;
     flex-direction: column;
+    text-align: center;
     font-family: "Poppins";
 }
 
@@ -213,6 +214,28 @@ form #title::after{
 
 #reiniciar:hover{
     background: #09418b;
+}
+
+.image{
+    pointer-events: none;
+    opacity: 0;
+}
+
+.image form{
+    display: flex;
+    flex-direction: column;
+}
+
+.image form .image-preview img{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+.results-card img{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 @keyframes fade-in{
