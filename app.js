@@ -18,12 +18,26 @@ const chosenImage = document.querySelector("#image-input");
 const previewImage = document.querySelector("#preview-image")
 const pageTitle = document.querySelector("#main-title");
 const resultsImage = document.querySelector("#results-image");
+const submitNameForm = document.querySelector("#name-form")
 
 let currentState = 0;
 let newImage;
 let information = {};
 
 firstButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(currentState === 0 && nome.value.length != 0){
+        information.name = nameInput.value;
+        nomeForm.style.opacity = "0";
+        nomeForm.style.pointerEvents = "none";
+        passatempoForm.style.animation = 'fade-in .5s linear';
+        passatempoForm.style.opacity = "1";
+        passatempoForm.style.pointerEvents = "auto";
+        currentState += 1;
+    }
+});
+
+submitNameForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if(currentState === 0 && nome.value.length != 0){
         information.name = nameInput.value;
@@ -99,3 +113,4 @@ function updatePreviewImage(event) {
     newImage = URL.createObjectURL(event.target.files[0]);
     previewImage.src = newImage;
 }
+
